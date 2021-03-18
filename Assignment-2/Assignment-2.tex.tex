@@ -1,0 +1,228 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{caption}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage{float}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+
+\title{AI1103-Assignment-2}
+\author{Name: Vikhyath Sai Kothamasu, Roll Number: CS20BTECH11056}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{figure} [h]
+    \includegraphics[width = 0.3\textwidth]{college logo.png}
+\end{figure}
+
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/Vikhyath-vec/AI1103/tree/main/Assignment-2/codes
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+
+https://github.com/Vikhyath-vec/AI1103/blob/main/Assignment-2/Assignment-2.tex
+\end{lstlisting}
+\section*{Question}
+Two cards are drawn successively with replacement from a well shuffled deck of 52 cards. Find the probability distribution of the number of aces.
+
+\section*{Solution}
+
+Let $X \in \{0,1,2,3,4,5,6,7,8,9,10,11,12\}$ represent the random variable, where 0 represents an ace card, 1 represents a card numbered '2', 2 represents a card numbered '3'... 9 represents a card numbered '10', 10 represents the J card, 11 represents the Q card, and 12 represents the K card. These are independent of the suit. 
+\begin{align}
+    n(X=i) = 4, i \in \{0, 1, 2\hdots 10, 11, 12\}
+\end{align}
+
+\begin{align}
+    \Pr(X=i) = 
+	\begin{cases}
+	\dfrac{4}{52} = \dfrac{1}{13} &  i \in \{0, 1, 2\hdots 10, 11, 12\}\\ ~\\[-1em]
+	0 & \text{otherwise}
+	\end{cases}
+\end{align}
+Let Y $\in \{0,1,2\}$ represent the random variable, where 0 represents the case where no aces are selected, 1 represents the case where one ace is selected, 2 represents the case where 2 aces are selected.
+\\Let Z $\in \{0,1\}$ represent the random variable, where 0 represents an ace card is picked while 1 represents a non-ace card is picked.
+
+\begin{align}
+    \Pr(Z=0) = \frac{1}{13}
+\end{align}
+
+\begin{align}
+    \Pr(Z=1) = \Sigma_{i=1}^{12} Pr(X=i)
+    \\ = \Sigma_{i=1}^{12}\frac{1}{13}
+    \\ = \frac{12}{13}
+\end{align}
+Now, for finding the probability distribution of the number of aces, 
+\begin{enumerate}
+    
+\item
+\begin{align}
+    \Pr(Y=0) = \Pr(Z=1) \times \Pr(Z=1)
+    \\\Pr(Y=0) = \frac{12}{13} \times \frac{12}{13} = \frac{144}{169}
+    \\\Pr(Y=0) = 0.852071
+\end{align}
+ 
+
+\item 
+\begin{multline}
+    \Pr(Y=1) = \Pr(Z=0) \times \Pr(Z=1) + 
+    \\\Pr(Z=1) \times \Pr(Z=0)
+\end{multline} 
+
+\begin{align}
+    \Pr(Y=1) = \frac{1}{13} \times \frac{12}{13} + \frac{12}{13} \times \frac{1}{13}
+    \\Pr(Y=1) = \frac{24}{169} = 0.142012
+\end{align}    
+   
+
+\item
+\begin{align}
+    \Pr(Y=2) = \Pr(Z=0) \times \Pr(Z=0)
+    \\\Pr(Y=2) = \frac{1}{13} \times \frac{1}{13} = \frac{1}{169}
+    \\\Pr(Y=2) = 0.005917
+\end{align}
+\end{enumerate}
+\begin{center}
+\begin{table}[h]
+    \centering
+    \resizebox{\columnwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline
+Serial number & Case & Probability of the case \\
+\hline
+1 & $\Pr(Y=0)$ & $\frac{144}{169}$ \\ 
+\hline
+2 & $\Pr(Y=1)$ & $\frac{24}{169}$ \\ 
+\hline
+3 & $\Pr(Y=2)$ & $\frac{1}{169}$ \\
+\hline
+\end{tabular}
+}
+    \caption{Probability distribution table }
+    \label{table 1}
+\end{table}
+\end{center}
+
+
+
+\begin{figure} [H]
+    \includegraphics[width = 0.5\textwidth]{assignment2 graph.png}
+    \caption{theoretical and simulated probability results}
+\end{figure}
+\end{document}
